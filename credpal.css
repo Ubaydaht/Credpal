@@ -2,11 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-color: blue; */
+    /* overflow: hidden; */
 }
-body{
-    height: 500vh;
-}
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -17,6 +15,7 @@ nav{
     position: sticky;
     top: 0;
     z-index: 100;
+    position: relative;
 }
 .left{
     display: flex;
@@ -130,6 +129,58 @@ nav{
     border-radius: 20px;
     background-color: white;
 }
+.blur{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+    width: 50px;
+    display: none;
+}
+.menu-list{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 25vh;
+    left: 0px;
+    gap: 25px;
+    padding: 20px 30px;
+    color: black;
+    display: none;
+    background-color: white;
+
+}
+.products{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.downloadd{
+    width: 200px;
+    padding: 15px;
+    border: transparent;
+    border-radius: 20px;
+    background-color: blue;
+    color: white;
+    margin: 0 30%;
+    z-index: 20;
+}
+.lang{
+    display: flex;
+    justify-content: space-between;
+}
+
 .hero{
     display: flex;
     justify-content: space-between;
@@ -140,12 +191,11 @@ nav{
     height: 100vh;
 }
 .hero_left{
-    display: flex;
-    flex-direction: column;
-    color: white;
+   color: white;
+   width: 50%;
 }
 .hero_left h1{
-    font-size: 80px;
+    font-size: 100px;
     padding-top: 50px;
 }
 .hero_left p{
@@ -229,10 +279,12 @@ nav{
 .customize{
     color: white;
     background-color: #9CA3A7 ;
-    width: 150px;
-    height: 40px;
+    width: 160px;
+    height: 50px;
     border: transparent;
     border-radius: 5px;
+    font-weight: bolder;
+    font-size: 15px;
 }
 .customize:hover{
     background-color:#bfc7d3;
@@ -240,10 +292,12 @@ nav{
 .container .allow{
     color: white;
     background-color:#006df7;
-    width: 90px;
-    height: 40px;
+    width: 100px;
+    height: 50px;
     border: none;
     border-radius: 5px;
+    font-weight: bolder;
+    font-size: 15px;
 }
 .card{
     display: flex;
@@ -290,14 +344,246 @@ nav{
     align-items: center;
 }
 .box{
-    width: 350px;
+    width: 24%;
     height: 500px;
-    background-color: #F6F0EF;
-    padding: 20px 10px 15px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
 }
-.box h3{
-    padding-bottom:20px;
+.boxes .box:first-child{
+    background-color: #F6F0EF;
+}
+.boxes .box:nth-child(2){
+    background-color: #F4F1F7;
+}
+.boxes .box:nth-child(3){
+    background-color: #E8F4FF;
+}
+.boxes .box:last-child{
+    background-color: #EBF1FF;
+}
+.boxes{
+    display: flex;
+    justify-content: space-between;
+}
+.boxes h3{
+    font-size: 30px;
+    width: 52%;
+}
+.boxp{
+    font-size: 15px;
+    line-height: 1.8;
+}
+.box button{
+    border: none;
+    font-weight: bold;
+    background-color: none;
+    border: none;
+    margin-left: 0;
 }
 .box img{
-    padding-bottom: 50px;
-} 
+    margin-top: 50px;
+}
+
+.bluebackground{
+    margin: 10% 0;
+    width: 100%;
+    height: 400px;
+    background-color: #006DF7;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+.bluebackground h3{
+    font-size: 50px;
+    padding: 20px;
+}
+.bluebackground p{
+    font-size: 25px;
+    padding-bottom: 60px;
+}
+.customers h1, .custo{
+    text-align: center;
+    padding: 20px;
+    font-size: 50px;
+}
+.custo{
+    font-size: 30px;
+    padding-bottom: 100px;
+}
+.person{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+.customercard{
+    width: 32%;
+    height: 300px;
+    border-radius: 5px;
+    background-color: #F9FAFB; 
+    padding: 30px; 
+    padding-bottom: 50px; 
+}
+.customercard p{
+    font-size: 18px;
+    text-align: left;
+    line-height: 2;
+    padding-bottom: 20px;
+}
+.cardCus{
+    display: flex;
+    justify-content: space-between;
+}
+footer{
+    padding: 0 0 20px 80px;
+}
+.hr{
+    margin: 50px 80px 50px 80px;
+}
+.hrtext{
+    font-size: 15px;
+    text-align: left;
+    padding: 20px 80px 20px 80px;
+    line-height: 1.8;
+}
+.down{
+    display: flex;
+    gap: 20px;
+    padding: 200px 80px 20px 80px;
+
+}
+.downcard{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    /* justify-content: space-between; */
+}
+.two{
+    width: 25%;
+}
+.downcard p{
+    font-size: 15px;
+    text-align: left;
+    padding-left: 0;
+    line-height: 2;
+}
+.downcard a{
+    color: black;
+    text-decoration: none;
+    padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+    .left span, .left .holder, .right{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    nav:hover .menu-list{
+        display: flex;
+    }
+    nav:hover .menu{
+        content: url(images/iconoir--cancel.svg);
+    }
+    .hero-right{
+        display: none;
+    }
+    .hero{
+        display: block;
+        padding-right: 30px;
+        height: 70vh;
+        padding-top: 20px;
+    }
+    .hero_left{
+        width: 100%;
+    }
+    .card{
+        display: block;
+    }
+    .card-text{
+        width: 100%;
+        padding: 10px 30px 30px 30px;
+    }
+    .card-image{
+        width: 100%;
+    }
+    .card-image img{
+        width: 90%;
+        margin: 5%;        
+    }
+   .boxes{
+        display: block;
+   }
+   .box{
+    width: 90%;
+    margin-bottom: 20px;
+    margin: 5%;
+    height: 400px;
+   }
+   .bluebackground{
+    height: 500px;
+   }
+   .bluebackground p{
+    font-size: 20px;
+    line-height: 1.8;
+    padding: 20px;
+    padding-bottom: 30px;
+   }
+   .bluebackground h3{
+    text-align: center;
+   }
+   .cardCus{
+    display: block;
+   }
+   .customercard{
+    width: 100%;
+    margin-bottom: 20px;
+    }
+    .down{
+        display: block;
+        padding: 150px 40px 20px 40px;
+    }
+    .downcard{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .downcard img{
+        width: 40%;
+    }
+    .container{
+        bottom: 0;
+        right: 0;
+        display: block;
+        width: 100%;
+        padding: 30px;
+        /* text-align: center; */
+        height: 200px;
+    }
+    .container button{
+        margin: 20px;
+        margin-left: 2px;
+    }
+    .hrtext{
+        padding: 20px 40px 20px 40px;
+    }
+
+}
+@media (max-width:465) {
+    .hero_left h1{
+        font-size: 50px;
+    }   
+}
